@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "payment",
+    "userauths",
 ]
+
+AUTH_USER_MODEL = "userauths.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
