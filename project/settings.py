@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -121,3 +122,25 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+JAZZMIN_SETTINGS = {
+    "site_header": "Admin Dashboard",
+    "site_title": "Admin Dashboard",
+    "site_brand": "Admin Dashboard",
+    "site_brand_small_text": "Admin Dashboard",
+    # "site_logo" : "images/logo.png",
+    "site_logo_classes": "img-circle",
+    # "site_icon" : "images/logo.png",
+    "welcome_sign": "Welcome to the Admin Dashboard",
+    "copyright": "Copyright 2025",
+    "show_ui_builder": True,
+    "login_logo": None,
+    "login_logo_dark": None,
+    "login_logo_light": None,
+    "login_logo_inverse": None,
+    "login_logo_inverse_dark": None,
+    "login_logo_inverse_light": None,
+    "login_logo_classes": "img-circle",
+    "site_brand_classes": "img-circle",
+    "order_with_respect_to": ["auth", "users"],
+}
