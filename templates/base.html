@@ -6,6 +6,9 @@
 		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 		<script defer src="https://unpkg.com/alpinejs"></script>
 		<title>{% block title %}{% endblock title %}</title>
+		<style type="text/tailwindcss">
+			input{ @apply border-2 border-gray-400 }
+		</style>
 	</head>
 	<body>
 		<header>
@@ -14,6 +17,12 @@
 					<li><a href="{% url "payment:index" %}">Home</a></li>
 					<li><a href="{% url "payment:contact" %}">contact</a></li>
 					<li><a href="{% url "payment:about" %}">About</a></li>
+						{% if request.user.is_authenticated %}
+						<li><a href="{% url "userauths:logout" %}">logout: {{request.user}}</a></li>
+						{% else %}
+						<li><a href="{% url "userauths:login" %}">login</a></li>
+						<li><a href="{% url "userauths:register" %}">register</a></li>
+						{% endif %}
 				</ul>
 			</navbar>
 		</header>
